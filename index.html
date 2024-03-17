@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>NaVid</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<style>
+  .video-container {
+    width: 30%; /* 每个容器宽度为页面宽度的32%，根据实际情况调整 */
+    display: inline-block; /* 使容器并列排列 */
+    margin: 1%; /* 添加外边距 */
+    vertical-align: top;
+  }
+
+  video {
+    width: 100%; /* 视频宽度填满容器 */
+    display: block; /* 确保视频占满整个容器宽度 */
+  }
+
+  .description {
+    text-align: center; /* 文字居中对齐 */
+  }
+</style>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <!-- <span class="author-block"><a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiazhao Zhang</a><sup>1,2,*</sup>,</span> -->
+              <span class="author-block">
+                <a href="https://jzhzhang.github.io/">Jiazhao Zhang</a><sup>1,2,*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Kunyu Wang<sup>2,*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com.hk/citations?user=_IUq7ooAAAAJ">Rongtao Xu</a><sup>2,3,*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/GengzeZhou">Gengze Zhou</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://yiconghong.me/">Yicong Hong</a><sup>5</sup>
+              </span>
+              <span class="author-block" style="display: block;">
+                Xiaomeng Fang<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://qi-wu.me/">Qi Wu</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ">Zhizheng Zhang</a><sup>2,6,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+              <span class="author-block"><sup>1</sup>
+                Peking University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>2</sup>Beijing Academy of Artificial Intelligence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>3</sup>CASIA
+              </span>
+              <span class="author-block" style="display: block;">
+                <sup>4</sup>University of Adelaide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>5</sup>Australian National University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>6</sup>GalBot
+              </span>
+              <span class="eql-cntrb" style="display: block;">
+                <small><sup>*</sup>Indicates Equal Contribution,&nbsp;</small>
+                <small><sup>†</sup>Indicates Equal Advising</small>
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2402.15852.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+                </span> -->
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (soon)</span>
+                </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.15852" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video 1 -->
+<section class="hero is-small">
+
+
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+
+
+
+      <h2 class="title is-3">Simple Instruction</h2>
+      <p> <b>Real-world demos by following simple instructions, such as walking to a landmark.</b></p>
+
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+
+
+
+
+        <div class="item item-video7">
+          <video poster="" id="video7" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/simple_instruction_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video8">
+          <video poster="" id="video8" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/simple_instruction_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video9">
+          <video poster="" id="video9" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/simple_instruction_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End teaser video 1 -->
+
+<!-- Teaser video 2 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Complex Instruction</h2>
+      <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p>
+
+      <div id="results-carousel-teaser2" class="carousel results-carousel">
+        <div class="item item-video10">
+          <video poster="" id="video10" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/complex_instruction_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/complex_instruction_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video12">
+          <video poster="" id="video12" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/teaser/complex_instruction_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+     <!-- <h2 class="subtitle has-text-centered">
+       Real-world demo of our proposed video-based VLM, NaVid, for vision-and-language navigation. Given the human instruction, NaVid only takes online RGB video frames as input and outputs a language action for robotic execution.
+     </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video 2 -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-and-Language Navigation (VLN) stands as a key research problem of Embodied AI, aiming at enabling agents to navigate in unseen environments following linguistic instructions. In this field, generalization is a long-standing challenge, either to out-of-distribution scenes or from Sim to Real. In this paper, we propose NaVid, a video-based large vision language model (VLM), to mitigate such a generalization gap. NaVid makes the first endeavour to showcase the capability of VLMs to achieve state-of-the-art level navigation performance without any maps, odometer and depth inputs. Following human instruction, NaVid only requires an on-the-fly video stream from a monocular RGB camera equipped on the robot to output the next-step action. Our formulation mimics how humans navigate and naturally gets rid of the problems introduced by odometer noises, and the Sim2Real gaps from map or depth inputs. Moreover, our video-based approach can effectively encode the historical observations of robots as spatio-temporal contexts for decision making and instruction following. We train NaVid with 550k navigation samples collected from VLN-CE trajectories, including action planning and instruction-reasoning samples, along with 665k large-scale web data. Extensive experiments show that NaVid achieves SOTA performance in simulation environments and the real world, demonstrating superior cross-dataset and Sim2Real transfer. We thus believe our proposed VLM approach plans the next step for not only the navigation agents but also this research field. We will release the code and data to benefit the community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Method Overview</h2>
+            <img src="static/images/method.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <b>The overview of NaVid.</b> The inputs of NaVid consist of the RGB frames from the online video observation {x0, · · · , xt} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame xt are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method Overview  -->
+
+<!-- Image carousel Caption  -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+          <h2 class="title is-3">Caption Results Visualization</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item"><img src="static/images/caption/caption-1.png" alt="MY ALT TEXT"/></div>
+            <div class="item"><img src="static/images/caption/caption-2.png" alt="MY ALT TEXT"/></div>
+            <div class="item"><img src="static/images/caption/caption-3.png" alt="MY ALT TEXT"/></div>
+            <div class="item"><img src="static/images/caption/caption-4.png" alt="MY ALT TEXT"/></div>
+            <div class="item"><img src="static/images/caption/caption-5.png" alt="MY ALT TEXT"/></div>
+            <div class="item"><img src="static/images/caption/caption-6.png" alt="MY ALT TEXT"/></div>
+          </div>
+    </div>
+  </div>
+</section> -->
+<!-- End image carousel Caption  -->
+
+<!-- Video carousel 1 Caption -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Caption Results Visualization</h2>
+        <p> <b>Given an egocentric RGB video, describe the trajectory using NaVid. </b></p>
+
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/real_video_caption/real_caption_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Walk forward and turn left. Wait by the first door on the left.</div>
+      </div>
+      
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/real_video_caption/real_caption_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Walk forward and turn left. Wait near the first doorway.</div>
+      </div>
+      
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/real_video_caption/real_caption_3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Turn around and walk to the other side of the room. Wait by the chair and table.</div>
+
+
+      </div>
+
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/sim_video_caption/sim_caption_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Exit the bathroom. Turn left and enter the bedroom. Wait near the bed.</div>
+      </div>
+      
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/sim_video_caption/sim_caption_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Walk through the doorway and turn left. Walk past the pool and wait by the first chair.</div>
+      </div>
+      
+      <div class="video-container">
+        <video autoplay playsinline controls muted loop>
+          <source src="./static/videos/sim_video_caption/sim_caption_3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="description"><b>NaVid:</b> Turn around and go into the hallway. Go into the room with the stairs and turn right. Go into the room with the kitchen
+          and wait there.</div>
+
+
+      </div>
+
+
+
+
+
+      <!-- <div id="results-carousel-Caption" class="carousel results-carousel"> -->
+        <!-- <div class="item item-video1 video-container">
+
+          <div class="item item-video1">
+          <video poster="" id="video1" autoplay playsinline controls muted loop height="100%">
+            <source src="./static/videos/real_video_caption/real_1.mp4"
+            type="video/mp4">
+          </video>
+          <p >
+            ssssssssssssssssssssssssssssssssssssssss
+          </p>
+
+        </div>
+
+
+
+          <video poster="" id="video2" autoplay playsinline controls muted loop height="100%">
+            <source src="./static/videos/real_video_caption/real_2.mp4"
+            type="video/mp4">
+          </video>
+
+          <video poster="" id="video3" autoplay playsinline controls muted loop height="100%">
+            <source src="./static/videos/real_video_caption/real_7.mp4"
+            type="video/mp4">
+          </video>
+
+    </div> -->
+  </div>
+</section>
+<!-- End Video carousel 1 Caption -->
+
+<!-- Image carousel 2 R2R -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">R2R Data Visualization</h2>
+      <div id="results-carousel" class="carousel results-carousel">  
+        <div class="item"><img src="static/images/r2r/r2r_1.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_2.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_3.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_4.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_5.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_6.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_7.png" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/images/r2r/r2r_8.png" alt="MY ALT TEXT"/></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End image carousel 2 R2R -->
+
+
+<!-- End video carousel R2R -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Results on R2R data</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- gif -->
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_1.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_2.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_3.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_4.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_5.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/r2r_visual/r_r2r_6.gif" alt="MY ALT TEXT"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Image carousel 3 RxR -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Results on RxR data</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- gif -->
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_1.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_2.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_3.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_4.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_5.gif" alt="MY ALT TEXT"/></div>
+        <div class="item"><img src="static/gif/rxr_visual/r_rxr_6.gif" alt="MY ALT TEXT"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel 3 RxR -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{zhang2024navid,
+        title={NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation},
+        author={Zhang, Jiazhao and Wang, Kunyu and Xu, Rongtao and Zhou, Gengze and Hong, Yicong and Fang, Xiaomeng and Wu, Qi and Zhang, Zhizheng and He, Wang},
+        journal={arXiv preprint arXiv:2402.15852},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
