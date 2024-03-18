@@ -62,6 +62,22 @@
   .description {
     text-align: center; /* 文字居中对齐 */
   }
+
+  .text-image-container {
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: flex-start; /* 上端对齐 */
+    justify-content: center;
+}
+
+ul {
+  text-align: left; /* 确保文本左对齐 */
+  list-style-position: inside; /* 列表标记与文本对齐 */
+  font-size: 17px;
+  list-style-type: circle; /* 使用圆形作为项目符号 */
+
+}
+
+
 </style>
 
 
@@ -86,7 +102,7 @@
               <span class="author-block" style="display: block;">
                 Xiaomeng Fang<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="http://qi-wu.me/">Qi Wu</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ">Zhizheng Zhang</a><sup>2,6,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ">Zhizheng Zhang</a><sup>6,†</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,†</sup>
               </span>
             </div>
@@ -162,10 +178,49 @@
   </div>
 </section>
 
-<!-- Teaser video 1 -->
+
+
 <section class="hero is-small">
 
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
 
+      <h2>
+      <!-- <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> -->
+      <div class="text-image-container title is-3">
+        <div>
+          <img src="static/images/highlight_logo.png" alt="示例图片" width="50">
+      </div>
+        <div class="text">
+            <p>Highlights</p>
+        </div>
+    </div>
+  </h2>
+
+
+
+      <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
+      <ul>
+        <li><b>NaVid is the first video-based Vision-Language Model (VLM) for the task of vision-and-language navigation (VLN).</b></li>
+        <li><b>NaVid is trained using 763k web-scale caption samples and 510k simulated samples, including VLN action samples (500k) and reasoning samples (10k).</b></li>
+        <li><b>NaVid demonstrates strong generalizability and achieves state-of-the-art (SOTA) performance in both simulated and real-world environments.</b></li>
+      </ul>
+
+
+    </div>
+
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+<!-- Teaser video 1 -->
+<section class="hero is-small">
 
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
@@ -173,8 +228,8 @@
 
 
 
-      <h2 class="title is-3">Simple Instruction</h2>
-      <p> <b>Real-world demos by following simple instructions, such as walking to a landmark.</b></p>
+      <h2 class="title is-3">Simple Instruction VLN</h2>
+      <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p>
 
       <div id="results-carousel-teaser1" class="carousel results-carousel">
 
@@ -184,19 +239,19 @@
 
         <div class="item item-video7">
           <video poster="" id="video7" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/simple_instruction_1.mp4"
+            <source src="static/videos/teaser/simple_instruction_1_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video8">
           <video poster="" id="video8" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/simple_instruction_2.mp4"
+            <source src="static/videos/teaser/simple_instruction_2_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video9">
           <video poster="" id="video9" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/simple_instruction_3.mp4"
+            <source src="static/videos/teaser/simple_instruction_3_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -211,25 +266,25 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Complex Instruction</h2>
+      <h2 class="title is-3">Complex Instruction VLN</h2>
       <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p>
 
       <div id="results-carousel-teaser2" class="carousel results-carousel">
         <div class="item item-video10">
           <video poster="" id="video10" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/complex_instruction_1.mp4"
+            <source src="static/videos/teaser/complex_instruction_1_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video11">
           <video poster="" id="video11" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/complex_instruction_2.mp4"
+            <source src="static/videos/teaser/complex_instruction_2_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video12">
           <video poster="" id="video12" autoplay playsinline controls muted loop height="100%">
-            <source src="static/videos/teaser/complex_instruction_3.mp4"
+            <source src="static/videos/teaser/complex_instruction_3_compressed.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -250,7 +305,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-and-Language Navigation (VLN) stands as a key research problem of Embodied AI, aiming at enabling agents to navigate in unseen environments following linguistic instructions. In this field, generalization is a long-standing challenge, either to out-of-distribution scenes or from Sim to Real. In this paper, we propose NaVid, a video-based large vision language model (VLM), to mitigate such a generalization gap. NaVid makes the first endeavour to showcase the capability of VLMs to achieve state-of-the-art level navigation performance without any maps, odometer and depth inputs. Following human instruction, NaVid only requires an on-the-fly video stream from a monocular RGB camera equipped on the robot to output the next-step action. Our formulation mimics how humans navigate and naturally gets rid of the problems introduced by odometer noises, and the Sim2Real gaps from map or depth inputs. Moreover, our video-based approach can effectively encode the historical observations of robots as spatio-temporal contexts for decision making and instruction following. We train NaVid with 550k navigation samples collected from VLN-CE trajectories, including action planning and instruction-reasoning samples, along with 665k large-scale web data. Extensive experiments show that NaVid achieves SOTA performance in simulation environments and the real world, demonstrating superior cross-dataset and Sim2Real transfer. We thus believe our proposed VLM approach plans the next step for not only the navigation agents but also this research field. We will release the code and data to benefit the community.
+            Vision-and-Language Navigation (VLN) stands as a key research problem of Embodied AI, aiming at enabling agents to navigate in unseen environments following linguistic instructions. In this field, generalization is a long-standing challenge, either to out-of-distribution scenes or from Sim to Real. In this paper, we propose NaVid, a video-based large vision language model (VLM), to mitigate such a generalization gap. NaVid makes the first endeavour to showcase the capability of VLMs to achieve state-of-the-art level navigation performance without any maps, odometer and depth inputs. Following human instruction, NaVid only requires an on-the-fly video stream from a monocular RGB camera equipped on the robot to output the next-step action. Our formulation mimics how humans navigate and naturally gets rid of the problems introduced by odometer noises, and the Sim2Real gaps from map or depth inputs. Moreover, our video-based approach can effectively encode the historical observations of robots as spatio-temporal contexts for decision making and instruction following. We train NaVid with 510k navigation samples collected from VLN-CE trajectories, including action planning and instruction-reasoning samples, along with 763k large-scale web data. Extensive experiments show that NaVid achieves SOTA performance in simulation environments and the real world, demonstrating superior cross-dataset and Sim2Real transfer. We thus believe our proposed VLM approach plans the next step for not only the navigation agents but also this research field. We will release the code and data to benefit the community.
           </p>
         </div>
       </div>
@@ -279,6 +334,31 @@
     </div>
   </div>
 </section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Data collection</h2>
+            <img src="static/images/data.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <!-- <p class="has-text-justified">
+                <b>The overview of NaVid.</b> The inputs of NaVid consist of the RGB frames from the online video observation {x0, · · · , xt} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame xt are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action.
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <!-- End Method Overview  -->
 
 <!-- Image carousel Caption  -->
@@ -308,7 +388,7 @@
 
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/real_video_caption/real_caption_1.mp4" type="video/mp4">
+          <source src="./static/videos/real_video_caption/real_caption_1_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Walk forward and turn left. Wait by the first door on the left.</div>
@@ -316,7 +396,7 @@
       
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/real_video_caption/real_caption_2.mp4" type="video/mp4">
+          <source src="./static/videos/real_video_caption/real_caption_2_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Walk forward and turn left. Wait near the first doorway.</div>
@@ -324,7 +404,7 @@
       
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/real_video_caption/real_caption_3.mp4" type="video/mp4">
+          <source src="./static/videos/real_video_caption/real_caption_3_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Turn around and walk to the other side of the room. Wait by the chair and table.</div>
@@ -334,7 +414,7 @@
 
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/sim_video_caption/sim_caption_1.mp4" type="video/mp4">
+          <source src="./static/videos/sim_video_caption/sim_caption_1_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Exit the bathroom. Turn left and enter the bedroom. Wait near the bed.</div>
@@ -342,7 +422,7 @@
       
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/sim_video_caption/sim_caption_2.mp4" type="video/mp4">
+          <source src="./static/videos/sim_video_caption/sim_caption_2_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Walk through the doorway and turn left. Walk past the pool and wait by the first chair.</div>
@@ -350,7 +430,7 @@
       
       <div class="video-container">
         <video autoplay playsinline controls muted loop>
-          <source src="./static/videos/sim_video_caption/sim_caption_3.mp4" type="video/mp4">
+          <source src="./static/videos/sim_video_caption/sim_caption_3_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="description"><b>NaVid:</b> Turn around and go into the hallway. Go into the room with the stairs and turn right. Go into the room with the kitchen
@@ -419,17 +499,57 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Results on R2R data</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <h2 class="title is-3">R2R train split (Training) ->  R2R val-unseen split (Evaluation)</h2>
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
 
-        <!-- gif -->
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_1.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_2.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_3.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_4.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_5.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/r2r_visual/r_r2r_6.gif" alt="MY ALT TEXT"/></div>
+
+
+
+
+        <div class="item item-video10">
+          <video poster="" id="video10" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video12">
+          <video poster="" id="video12" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video13">
+          <video poster="" id="video13" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video14">
+          <video poster="" id="video14" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video15">
+          <video poster="" id="video15" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/r2r_visual/r_r2r_6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+
       </div>
+
+
+
+
     </div>
   </div>
 </section>
@@ -440,16 +560,52 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Results on RxR data</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <h2 class="title is-3"> R2R train split (Training) ->  RxR val-unseen split (Evaluation)</h2>
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
 
-        <!-- gif -->
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_1.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_2.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_3.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_4.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_5.gif" alt="MY ALT TEXT"/></div>
-        <div class="item"><img src="static/gif/rxr_visual/r_rxr_6.gif" alt="MY ALT TEXT"/></div>
+
+
+
+
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video18">
+          <video poster="" id="video18" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video20">
+          <video poster="" id="video20" autoplay playsinline controls muted height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video21">
+          <video poster="" id="video21" autoplay playsinline controls muted  height="100%">
+            <source src="static/gif/rxr_visual/r_rxr_6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+
       </div>
     </div>
   </div>
@@ -463,7 +619,7 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{zhang2024navid,
         title={NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation},
-        author={Zhang, Jiazhao and Wang, Kunyu and Xu, Rongtao and Zhou, Gengze and Hong, Yicong and Fang, Xiaomeng and Wu, Qi and Zhang, Zhizheng and He, Wang},
+        author={Zhang, Jiazhao and Wang, Kunyu and Xu, Rongtao and Zhou, Gengze and Hong, Yicong and Fang, Xiaomeng and Wu, Qi and Zhang, Zhizheng and Wang, He},
         journal={arXiv preprint arXiv:2402.15852},
         year={2024}
       }</code></pre>
