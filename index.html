@@ -72,7 +72,7 @@
 ul {
   text-align: left; /* 确保文本左对齐 */
   list-style-position: inside; /* 列表标记与文本对齐 */
-  font-size: 17px;
+  font-size: 16px;
   list-style-type: circle; /* 使用圆形作为项目符号 */
 
 }
@@ -156,7 +156,7 @@ ul {
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (soon)</span>
+                  <span>Code (TBD)</span>
                 </a>
                 </span> -->
 
@@ -202,7 +202,9 @@ ul {
       <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
       <ul>
         <li><b>NaVid is the first video-based Vision-Language Model (VLM) for the task of vision-and-language navigation (VLN).</b></li>
-        <li><b>NaVid is trained using 763k web-scale caption samples and 510k simulated samples, including VLN action samples (500k) and reasoning samples (10k).</b></li>
+        <li><b>NaVid leverages only RGB sequences, eliminating the need for location, orientation, depth, or map.</b></li>
+        <li><b>NaVid is co-trained with real-world caption data (763k) and simulated VLN data (510k). The VLN capability is obtained by leveraging simulation environments, while real-world understanding is gained through real-world caption data.
+          </b></li>
         <li><b>NaVid demonstrates strong generalizability and achieves state-of-the-art (SOTA) performance in both simulated and real-world environments.</b></li>
       </ul>
 
@@ -228,7 +230,7 @@ ul {
 
 
 
-      <h2 class="title is-3">Simple Instruction VLN</h2>
+      <h2 class="title is-3">(Sim-to-Real) Simple Instruction VLN</h2>
       <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p>
 
       <div id="results-carousel-teaser1" class="carousel results-carousel">
@@ -266,7 +268,7 @@ ul {
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Complex Instruction VLN</h2>
+      <h2 class="title is-3">(Sim-to-Real) Complex Instruction VLN</h2>
       <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p>
 
       <div id="results-carousel-teaser2" class="carousel results-carousel">
@@ -325,7 +327,7 @@ ul {
             <img src="static/images/method.png" alt="NaVid" class="center-image blend-img-background">
             <div class="level-set has-text-justified">
               <p class="has-text-justified">
-                <b>The overview of NaVid.</b> The inputs of NaVid consist of the RGB frames from the online video observation {x0, · · · , xt} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame xt are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action.
+                <b>The overview of NaVid.</b> The inputs of NaVid consist of the RGB frames from the online video observation {x<sub>0</sub>, · · · , x<sub>t</sub>} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame x<sub>t</sub> are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action.
               </p>
             </div>
           </div>
@@ -344,9 +346,12 @@ ul {
             <h2 class="title is-3">Data Collection</h2>
             <img src="static/images/data.png" alt="NaVid" class="center-image blend-img-background">
             <div class="level-set has-text-justified">
-              <!-- <p class="has-text-justified">
-                <b>The overview of NaVid.</b> The inputs of NaVid consist of the RGB frames from the online video observation {x0, · · · , xt} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame xt are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action.
-              </p> -->
+              <p class="has-text-justified">
+                <b>We co-train NaVid using real-world caption data (763k) and simulated VLN data (510k). The simulated VLN data consists of 500k action planning samples and 10k instruction reasoning samples.</b>
+              </p>
+              <p class="has-text-justified">
+                <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b>
+              </p>
             </div>
           </div>
         </div>
