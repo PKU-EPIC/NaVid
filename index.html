@@ -121,7 +121,7 @@ ul {
               </span>
               <span class="eql-cntrb" style="display: block;">
                 <small><sup>*</sup>Indicates Equal Contribution,&nbsp;</small>
-                <small><sup>†</sup>Indicates Equal Advising</small>
+                <small><sup>†</sup>Indicates Equal Advising.</small>
               </span>
             </div>
 
@@ -156,7 +156,7 @@ ul {
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (TBD)</span>
+                  <span>Code (soon)</span>
                 </a>
                 </span> -->
 
@@ -202,10 +202,11 @@ ul {
       <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
       <ul>
         <li><b>NaVid is the first video-based Vision-Language Model (VLM) for the task of vision-and-language navigation (VLN).</b></li>
-        <li><b>NaVid leverages only RGB sequences, eliminating the need for location, orientation, depth, or map.</b></li>
-        <li><b>NaVid is co-trained with real-world caption data (763k) and simulated VLN data (510k). The VLN capability is obtained by leveraging simulation environments, while real-world understanding is gained through real-world caption data.
-          </b></li>
-        <li><b>NaVid demonstrates strong generalizability and achieves state-of-the-art (SOTA) performance in both simulated and real-world environments.</b></li>
+        <li><b>NaVid navigates in a human-like manner, requiring solely an on-the-fly video stream from a monocular camera as input, without the need for maps, odometers, or depth inputs.</b></li>
+        <li><b>NaVid incorporates 510K VLN video sequences from simulation environments and 763K real-world caption samples to achieve cross-scene generalization.</b></li>
+        <!-- <li><b>NaVid is co-trained with real-world caption data (763k) and simulated VLN data (510k). The VLN capability is obtained by leveraging simulation environments, while real-world understanding is gained through real-world caption data.
+          </b></li> -->
+        <li><b>NaVid achieves state-of-the-art (SOTA) performance in both simulated and real-world environments, and exhibits strong generalizability on unseen scenarios.</b></li>
       </ul>
 
 
@@ -230,8 +231,9 @@ ul {
 
 
 
-      <h2 class="title is-3">(Sim-to-Real) Simple Instruction VLN</h2>
-      <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p>
+      <h2 class="title is-3">Sim-to-Real Demos: Simple Instruction VLN</h2>
+      <p> <b>In these demos, the agent navigates following relatively simple instructions, such as walking to a single landmark. NaVid demonstrates the ability to accurately distinguish differences in similar instructions and accordingly complete precise navigation behaviors.</b></p>
+      <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
 
       <div id="results-carousel-teaser1" class="carousel results-carousel">
 
@@ -268,8 +270,9 @@ ul {
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">(Sim-to-Real) Complex Instruction VLN</h2>
-      <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p>
+      <h2 class="title is-3">Sim-to-Real Demos: Complex Instruction VLN</h2>
+      <p> <b>In these demos, the agent navigates according to complex instructions composed of multiple simple instructions in sequence. NaVid can accurately execute them in the correct order.</b></p>
+      <!-- <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p> -->
 
       <div id="results-carousel-teaser2" class="carousel results-carousel">
         <div class="item item-video10">
@@ -344,13 +347,13 @@ ul {
         <div class="column is-four-fifths">
           <div class="content">
             <h2 class="title is-3">Data Collection</h2>
-            <img src="static/images/data.png" alt="NaVid" class="center-image blend-img-background">
+            <img src="static/images/data_collection.png" alt="NaVid" class="center-image blend-img-background">
             <div class="level-set has-text-justified">
               <p class="has-text-justified">
                 <b>We co-train NaVid using real-world caption data (763k) and simulated VLN data (510k). The simulated VLN data consists of 500k action planning samples and 10k instruction reasoning samples.</b>
               </p>
               <p class="has-text-justified">
-                <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b>
+                <!-- <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b> -->
               </p>
             </div>
           </div>
@@ -388,7 +391,8 @@ ul {
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Caption Results Visualization</h2>
+      <h2 class="title is-3">Results of Navigation Video Captioning</h2>
+      <!-- <h2 class="title is-3">Caption Results Visualization</h2> -->
         <p> <b>Given an egocentric RGB video, describe the trajectory using NaVid. </b></p>
 
       <div class="video-container">
@@ -504,7 +508,8 @@ ul {
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">R2R train split (Training) ->  R2R val-unseen split (Evaluation)</h2>
+      <h2 class="title is-3">Cross-scene Generalization Results on R2R</h2>
+      <h3 class="title is-5">(R2R training split ->  R2R validation unseen split)</h2>
       <div id="results-carousel-teaser1" class="carousel results-carousel">
 
 
@@ -565,7 +570,8 @@ ul {
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3"> R2R train split (Training) ->  RxR val-unseen split (Evaluation)</h2>
+      <h2 class="title is-3"> Cross-scene Generalization Results from R2R to RxR</h2>
+      <h2 class="title is-5"> (R2R training split ->  RxR validation unseen split )</h2>
       <div id="results-carousel-teaser1" class="carousel results-carousel">
 
 
